@@ -21,6 +21,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TaskBuilderExampleComponent } from './task-builder-example/task-builder-example.component';
 import { ReactiveFormTestComponent } from './reactive-form-test/reactive-form-test.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -47,7 +50,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]

@@ -3,6 +3,8 @@ import { ElectronService } from './providers/electron.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from '../environments/environment';
 
+import 'hammerjs';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -17,6 +17,10 @@ export class ReactiveFormTestComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick(){
+    alert("Hoge")
+  }
+
   fileChangeEvent(fileInput: any) {
     console.log(fileInput.target.files[0].path);
     this.imgPath = fileInput.target.files[0].path;
