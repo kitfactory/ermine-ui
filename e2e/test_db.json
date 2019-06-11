@@ -1,0 +1,17 @@
+{
+    "classification":[
+        {
+            "id": 1,
+            "name": "ermine.dataset.Dataset",
+            "options":{
+
+            }
+        }
+    ],
+    "status":[
+        {
+            "id":1,
+            "name": "ermine.dataset.Dataset"
+        }
+    ]
+}
