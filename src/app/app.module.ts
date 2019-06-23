@@ -23,6 +23,7 @@ import { TaskBuilderExampleComponent } from './task-builder-example/task-builder
 import { ReactiveFormTestComponent } from './reactive-form-test/reactive-form-test.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { CsvFileService } from './csv-file.service';
 
 
 // AoT requires an exported function for factories
@@ -55,7 +56,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatButtonModule,
     MatCheckboxModule
   ],
-  providers: [ElectronService],
+  providers: [
+    ElectronService,
+    CsvFileService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
