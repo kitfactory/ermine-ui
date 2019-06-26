@@ -39,8 +39,6 @@ export class TaskBuilderExampleComponent implements OnInit {
       type: 'scatter'
     };
 
-    console.log(data.fpr);
-
     let xaxis:Partial<Plotly.LayoutAxis> ={
       title: 'True Positive Rate',
     }
