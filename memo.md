@@ -1,20 +1,24 @@
 ### Angular 名前
 ng g component似続けてキャメルケース(CamelCase)を入力しても自動的にケバブケース(kebab-case)に変換される。
 
-### Angular サービス
+### Angular サービスの作成
+
+雛形作成
 
 ```
-ng g service 
+ng g service hogeHoge
 
 ```
 
-@Injection
+## @Injection
 
-app.module.tsのproviders登録
+## app.module.tsのproviders登録
 
-component.tsにて
+## component.tsにて
 - importに追加
 - constructor引数に追加
+
+
 
 
 ### RoCコンポーネント

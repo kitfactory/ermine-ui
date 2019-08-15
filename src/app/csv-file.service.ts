@@ -5,6 +5,8 @@ import * as parse from "csv-parse";
 import * as fs from "fs";
 import { Datum } from 'plotly.js';
 
+import * as child from "child_process";
+
 
 export class RocCurveData {
   public fpr: number[];
@@ -47,6 +49,11 @@ export class CsvFileService {
   async loadRocCurveCsv(path:string): Promise<RocCurveData>{
     console.log("load csv file " + path);
 
+
+    var foo: child.ChildProcess = child.exec('echo hello');
+    console.log(typeof foo.on);
+
+
     return new Promise(function(resolve, reject){
 
       const stream:fs.ReadStream = fs.createReadStream(path);
@@ -60,7 +67,6 @@ export class CsvFileService {
       parser.on('readable', function(){
         let record;
         while (record = parser.read()) {
-          console.log(record);
           fpr.push(record[1]);
           tpr.push(record[2]);
           thresolds.push(record[3]);
@@ -84,6 +90,7 @@ export class CsvFileService {
   }
 
   async loadConfusionMatrixCsv(path:string): Promise<ConfusionMatrixData>{
+
     return new Promise(function(resolve){
       console.log("load csv file " + path);
       resolve(new ConfusionMatrixData(1,[[10,10]]));

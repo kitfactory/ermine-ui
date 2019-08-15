@@ -2,6 +2,10 @@ import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
+// max os
+const fixPath = require('fix-path');
+fixPath();
+
 let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');

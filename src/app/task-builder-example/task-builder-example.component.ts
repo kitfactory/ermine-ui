@@ -41,10 +41,11 @@ export class TaskBuilderExampleComponent implements OnInit {
 
     let xaxis:Partial<Plotly.LayoutAxis> ={
       title: 'True Positive Rate',
+      fixedrange: false
     }
     let yaxis:Partial<Plotly.LayoutAxis>={
       title: 'False Positive Rate',
-      fixedrange: true
+      fixedrange: false
     }
 
     let layout:Partial<Plotly.Layout> = {
@@ -62,7 +63,6 @@ export class TaskBuilderExampleComponent implements OnInit {
 
     var trace: Partial<Plotly.Data>[] = [trace1];
     Plotly.newPlot('plot', trace, layout);  
-
 
     let conf_data:ConfusionMatrixData = new ConfusionMatrixData(2,[[10,0],[1,10]]);
 

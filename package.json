@@ -91,7 +91,10 @@
     "@angular/material": "^8.0.1",
     "@types/plotly.js": "^1.44.9",
     "csv-parse": "^4.4.3",
+    "cwise": "^1.0.10",
+    "fix-path": "^2.1.0",
     "hammerjs": "^2.0.8",
+    "ndarray-fill": "^1.0.2",
     "plotly.js": "^1.48.3"
   }
 }
